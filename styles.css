@@ -1,0 +1,147 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+.tab {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    white-space: nowrap;
+}
+
+.tab.active {
+    background-color: #0056b3;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+#notepad {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 0; /* Remove margin-right from the first input */
+    flex: 1; /* Allow input to grow */
+}
+
+input#fileFormat {
+    width: 60px;
+    margin-left: 5px; /* Add minimal margin-left to avoid overlap with period */
+}
+
+.file-separator {
+    margin-left: 5px;
+    margin-right: 5px; /* Adjust spacing around period */
+}
+
+button, label {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:hover, label:hover {
+    background-color: #0056b3;
+}
+
+/* Hide default file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Style label to look like a button */
+label[for="fileInput"] {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
